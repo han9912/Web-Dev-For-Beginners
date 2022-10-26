@@ -1,7 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "My Carbon Trigger",
-	"version": "0.1.0",
+	"version": "0.2.0",
+	"description": "provide region and APIkey, get Carbon usage",
 	"permissions": ["<all_urls>"],
 	"background": {
 		"scripts": ["background.js"]

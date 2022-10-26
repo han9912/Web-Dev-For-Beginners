@@ -17,18 +17,18 @@
 	<!--form area-->
 	<form class="form-data" autocomplete="on">
 		<div>
-			<h2>New? Add your Information</h2>
+			<h2>New? Add your Info.</h2>
 		</div>
 		<div>
 			<label for="region">Region Name</label>
-			<input type="text" id="region" required class="region-name" />
+			<input type="text" id="region" class="region-name" />
 		</div>
 		<div>
 			<label for="api">Your API Key from tmrow</label>
-			<input type="text" id="api" required class="api-key" />
+			<input type="text" id="api" class="api-key" />
 		</div>
-		<button type="button" class="search-btn">Submit</button>
-	</form>	
+		<button class="search-btn" type="submit">Sumbmit</button>
+	</form>
 	<!--result area-->
 	<div class="result">
 		<div class="loading">loading...</div>
@@ -39,9 +39,8 @@
 			<p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
 			<p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
 		</div>
-		<button type="button" class="clear-btn">Change region</button>
+		<button type="reset" class="clear-btn">Change region</button>
 	</div>
-
 	<script src="main.js"></script>
 </body>
 
