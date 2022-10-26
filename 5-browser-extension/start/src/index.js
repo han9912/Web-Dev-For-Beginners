@@ -14,6 +14,35 @@ const clearBtn = document.querySelector('.clear-btn');
 
 //6
 //call the API
+import axios from '../node_modules/axios';
+async function displayCarbonUsage(apiKey, region) {
+    try {
+        await axios
+            .get('https://api.co2signal.com/v1/latest', {
+                params: {
+                    countryCode: region,
+                },
+                headers: {
+                    'auth-token': apiKey,
+                }
+            })
+            .then((response) => {
+                let CO2 = Math.floor(response.data.data.carbonItensity);
+
+                loading.style.display = 'none';
+                form.style.display = 'none';
+                myregion.textContent = region;
+                usage.textContent = Math.round(response.data.data.carbonItensity) + 'grams';
+                fossilfuel.textContent = response.data.data.fossilfuelPercentage.toFixed(2) + '%';
+                results.style.display = 'block';
+            });
+    } catch (error) {
+        console.log(error);
+        loading.style.display = 'none';
+        results.style.display = 'none';
+        errors.textContent = 'Sorry, no data for requested region.';
+    }
+}
 
 //5
 //set up user's api key and region
