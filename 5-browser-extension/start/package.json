@@ -1,7 +1,7 @@
 {
 	"name": "carbon-trigger-extension",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A extension provided by Microsoft's web dev beginning class",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
